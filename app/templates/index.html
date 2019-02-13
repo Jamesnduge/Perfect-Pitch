@@ -3,24 +3,38 @@
     <title>{{title}}</title>
   </head>
   <body>
-  {% block content %}
-    <div class="row">
-      <div class="col-md-6" style="backroung-color:silver;">
-        <div class="jumbotron">
+    {% block content %}
+    {% if current_user.is_authenticated %}
+      <div class="row">
+        <div class="col-md-6" style="backroung-color:silver;">
+          <div class="jumbotron" style ="color:firebrick; padding-bottom:110px;">
+            <img style="height:25%; width:25%; border-radius:12em; margin-left:200px;" src="https://media3.giphy.com/media/12FllbiIzsn7pK/giphy.gif"><br>
+            <p style="float:right;"><em>Pefect-Pitch provides a platform to post your 1-miute pitches in various fields i.e, Product pitch, Interview pitch and pick-up lines.</em></p>
+          </div>
 
         </div>
-      </div>
-      <div class="col-md-6" style="backroung-color:black;">
-        <div class="jumbotron">
-
+        <div class="col-md-6" style="backroung-color:black;">
+          <div class="jumbotron" style ="color:firebrick; padding-bottom:48px;">
+            <img style="height:40%; width:30%; border-radius:8em; margin-left:200px;" src="https://i.gifer.com/AXcz.gif"><br>
+            <p><em>Review pitches that have been posted and leave a comment on specific pitches after creating your account</em></p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="jumbotron" style="height:400px;">
-      
+      <div class="jumbotron" style="height:500px;">
+        <span style="float:right; margin:15px; font-size:2em;"><li><a href="{{url_for('auth.login')}}">Login</a></li></span>
+        <span style="float:right; margin:15px;"><li><a href="{{url_for('auth.register')}}">Register</a></li></span>
+        <br><br>
+        <img style="height:400px; width:40%; margin-left:100px; border-radius:2em;" src="https://designmodo.com/wp-content/uploads/2015/09/contacts.gif">
+      </div>
+    {%else%}
+    <div class="jumbotron" style="height:500px;">
+      <span style="float:right; margin:15px; font-size:2em;"><a href="{{url_for('auth.login')}}">Login</a></span>
+      <span style="float:right; margin:15px; font-size:2em;"><a href="{{url_for('auth.register')}}">Register</a></span>
+      <br><br>
+      <img style="height:400px; width:40%; margin-left:100px; border-radius:2em;" src="https://designmodo.com/wp-content/uploads/2015/09/contacts.gif">
     </div>
-
-  {% endblock %}
+    {%endif%}
+    {% endblock %}
 
   </body>
