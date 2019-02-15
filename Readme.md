@@ -24,14 +24,13 @@ This python application enables a user to register for an account and later on s
 4.A user can log out of the account
 
 ## Behavior Driven Development
-  |Behaviour|
-  |--------------------------------------------------|--------------------------------------------------------------------|
-  |Input                                            |                Output                                              |
-  | emailadress,password,username                    |user will be required to login                                      |
-  |password and password confirmation                | user will be required to enter matching passwords                  |
-  |Email address and correct password                |User account page                                                   |
-  |Choose the profile picture path                   |Profile picture                                                     |
-  |Pitch title and description                       |Pitch posted depending on the category chosen                       |
+|Behavior                           |Input                      |                Output|
+|-----------------------------------|---------------------------|----------------------|
+|User can signup                    |email adress,username,password|user will be required to login|
+|Checks if the passwords match    |password and repeat password| user will be required to enter matching passwords|
+|User can login |Email address and correct password|User account page|
+|User can update profile|Choose the profile picture path|Profile picture|
+|User can post pitch by clicking the pitch|Pitch title and description|Pitch posted depending on the category chosen|               |
 ## Technologies used
 * Python
 
