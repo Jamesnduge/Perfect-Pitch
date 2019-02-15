@@ -25,14 +25,13 @@ This python application enables a user to register for an account and later on s
 
 ## Behavior Driven Development
   |Behaviour|
-  |---------------------------|
-  |Input                      |                Output|
-  | emailadress,password,username|user will be required to login|
-   |password and password confirmation| user will be required to enter matching passwords|
-|Email address and correct password|User account page|
-|Choose the profile picture path|Profile picture|
-|Pitch title and description|Pitch posted depending on the category chosen|
-
+  |--------------------------------------------------|--------------------------------------------------------------------|
+  |Input                                            |                Output                                              |
+  | emailadress,password,username                    |user will be required to login                                      |
+  |password and password confirmation                | user will be required to enter matching passwords                  |
+  |Email address and correct password                |User account page                                                   |
+  |Choose the profile picture path                   |Profile picture                                                     |
+  |Pitch title and description                       |Pitch posted depending on the category chosen                       |
 ## Technologies used
 * Python
 
