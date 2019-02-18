@@ -1,0 +1,30 @@
+<body>
+{% extends 'bootstrap/base.html' %}
+{% import 'macros.html' as macro %}
+{% block navbar %}
+{% include 'navbar.html'%}
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <h2 align="center">Pick-up Lines</h2>
+      <div class= "col-md-3">
+
+
+
+
+      </div>
+      <div class="col-md-6">
+        {{macro.display(pickuppitch)}}
+     </div>
+     <div class="co-md-3">
+
+     </div>
+    </div>
+</div>
+
+
+{% endblock%}
+</body>

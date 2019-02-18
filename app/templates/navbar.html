@@ -12,9 +12,9 @@
       <div class="navbar-collapse collapse">
          <ul class="nav navbar-nav">
             <li><a href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
-            <li><a href="/">Pickup lines</a></li>
-            <li><a href="/">Interview</a></li>
-            <li><a href="/">Product</a></li>
+            <li><a href="/pickup">Pickup lines</a></li>
+            <li><a href="/interview">Interview</a></li>
+            <li><a href="/product">Product</a></li>
          </ul>
          <ul class="nav navbar-nav navbar-right">
                   {% if current_user.is_authenticated %}

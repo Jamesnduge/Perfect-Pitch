@@ -1,0 +1,46 @@
+{% macro display(category_list) %}
+<div class="row">
+	{% if category_list %}
+		{% for category in category_list %}
+		<div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          {{category.title}}
+        </div>
+        <div class="panel-body">
+          {{category.description}}
+
+        </div>
+        <div class="panel-footer">
+          <a href="{{url_for('main.new_comment',pitch_id = category.id)}}"> Add a comment</a><br>
+				  <a href="{{url_for('main.upvote',pitch_id = category.id)}}"><i class="juu"></i>Upvotes<span>  {{category.upvotes.count()}}</span></a><br>
+			  	<a href="{{url_for('main.downvote',pitch_id = category.id)}} "><i class="chini"></i>Downvotes<span>  {{category.downvotes.count()}}</span></a>
+
+        </div>
+      </div>
+
+		</div>
+		{% endfor %}
+	{% else %}
+	{% endif %}
+</div>
+{% endmacro %}
+
+
+
+{% macro displayComment(comments) %}
+<ul>
+			{% if comments %}
+  			{% for comment in comments %}
+  				<div class="row text-center">
+  					<a><p style="color: brown">{{ comment.description }}</p></a>
+  					<small> posted by {{comment.user.username}}</small>
+  				</div>
+  			{% endfor %}
+			{% else %}
+			  <h3>No comments</h3>
+			{%endif%}
+	</ul>
+
+
+{% endmacro %}
