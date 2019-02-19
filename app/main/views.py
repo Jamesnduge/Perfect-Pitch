@@ -102,7 +102,7 @@ def new_comment(pitch_id):
     if form.validate_on_submit():
         description = form.description.data
 
-        new_comment = Comment(description=description, user_id=current_user._get_current_object().id, pitch_id=pitch_id)
+        new_comment = Comment(user_id=current_user._get_current_object().id, pitch_id=pitch_id, description=description)
         db.session.add(new_comment)
         db.session.commit()
 

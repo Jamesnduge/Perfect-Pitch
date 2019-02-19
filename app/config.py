@@ -9,8 +9,10 @@ class Config:
     MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587
     MAIL_USE_TLS = True
-    MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
-    MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
+    MAIL_USERNAME = "lilbratha@gmail.com"
+    MAIL_PASSWORD = "smallbrother1234."
+    SENDER_EMAIL = "lilbratha@gmail.com"
+    SUBJECT_PREFIX = "Perfect-Pitch"
 
 
 
@@ -21,7 +23,7 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://jamesmwangi:tj193345@localhost/pitch'
 
 
 class DevConfig(Config):
