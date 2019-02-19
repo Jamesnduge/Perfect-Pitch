@@ -1,0 +1,3 @@
+Hello {{user.username}}
+Welcome to Perfect-pitch
+You successfully created your account on Perfect-pitch. Have fun pitching and commenting in different categories. Don't forget to give the pithes you like an upvote.
